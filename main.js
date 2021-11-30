@@ -18,8 +18,10 @@ camera.position.setZ(30);
 
 renderer.render( scene, camera );
 
+const torusTexture = new THREE.TextureLoader().load('donut.jpeg');
+
 const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 )
-const material = new THREE.MeshStandardMaterial( { color: 0xff6347 } );
+const material = new THREE.MeshStandardMaterial({ map: torusTexture } );
 const torus = new THREE.Mesh( geometry, material );
 
 scene.add(torus)
