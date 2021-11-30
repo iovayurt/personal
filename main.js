@@ -103,8 +103,8 @@ function moveCamera() {
   moon.rotation.z += 0.05;
 
   mars.rotation.x += 0.1;
-  mars.rotation.y += 0.01;
-  mars.rotation.z += 0.01;
+  mars.rotation.y += 0.07;
+  mars.rotation.z += 0.02;
 
   ilyas.rotation.y += 0.01;
   ilyas.rotation.z += 0.01;
