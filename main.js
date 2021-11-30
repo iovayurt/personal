@@ -62,6 +62,26 @@ const ilyas = new THREE.Mesh(
 
 scene.add(ilyas);
 
+const moonTexture = new THREE.TextureLoader().load('moon.jpeg');
+const normalTexture = new THREE.TextureLoader().load('normal.jpeg');
+
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial( {
+    map: moonTexture,
+    normalMap: normalTexture,
+  } )
+);
+
+scene.add(moon);
+
+moon.position.z = 30;
+moon.position.setX(-10);
+
+ilyas.position.z = -5;
+ilyas.position.x = 2;
+
+
 function animate() {
   requestAnimationFrame( animate );
 
