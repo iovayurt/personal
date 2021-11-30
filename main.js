@@ -49,6 +49,19 @@ function addStar() {
 
 Array(200).fill().forEach(addStar)
 
+
+const spaceTexture = new THREE.TextureLoader().load('bg_space.png');
+scene.background = spaceTexture;
+
+const ilyasTexture = new THREE.TextureLoader().load('12x2.jpg');
+
+const ilyas = new THREE.Mesh(
+  new THREE.BoxGeometry(3,3,3),
+  new THREE.MeshBasicMaterial( { map: ilyasTexture })
+);
+
+scene.add(ilyas);
+
 function animate() {
   requestAnimationFrame( animate );
 
