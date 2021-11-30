@@ -81,11 +81,30 @@ moon.position.setX(-10);
 ilyas.position.z = -5;
 ilyas.position.x = 2;
 
+const marsTexture = new THREE.TextureLoader().load('mars.jpeg');
+
+const mars = new THREE.Mesh(
+  new THREE.SphereGeometry(6, 52, 52),
+  new THREE.MeshStandardMaterial( {
+    map: marsTexture,
+  })
+);
+
+scene.add(mars);
+
+mars.position.z = -25;
+mars.position.setX(30);
+
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
+
   moon.rotation.x += 0.05;
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
+
+  mars.rotation.x += 0.1;
+  mars.rotation.y += 0.01;
+  mars.rotation.z += 0.01;
 
   ilyas.rotation.y += 0.01;
   ilyas.rotation.z += 0.01;
