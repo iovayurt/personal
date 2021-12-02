@@ -55,7 +55,7 @@ Array(200).fill().forEach(addStar)
 const spaceTexture = new THREE.TextureLoader().load('bg_space.png');
 scene.background = spaceTexture;
 
-const ilyasTexture = new THREE.TextureLoader().load('12x2.jpg');
+const ilyasTexture = new THREE.TextureLoader().load('tio1.jpeg');
 
 const ilyas = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
@@ -64,14 +64,14 @@ const ilyas = new THREE.Mesh(
 
 scene.add(ilyas);
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpeg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpeg');
+const moonTexture = new THREE.TextureLoader().load('tennis.png');
+//const normalTexture = new THREE.TextureLoader().load('normal.jpeg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial( {
     map: moonTexture,
-    normalMap: normalTexture,
+    //normalMap: normalTexture,
   } )
 );
 
@@ -83,12 +83,14 @@ moon.position.setX(-10);
 ilyas.position.z = -5;
 ilyas.position.x = 2;
 
-const marsTexture = new THREE.TextureLoader().load('mars.jpeg');
+const marsTexture = new THREE.TextureLoader().load('soccer.jpeg');
+const mrsTexture = new THREE.TextureLoader().load('normal.jpeg');
 
 const mars = new THREE.Mesh(
   new THREE.SphereGeometry(6, 52, 52),
   new THREE.MeshStandardMaterial( {
     map: marsTexture,
+    normalMap: mrsTexture,
   })
 );
 
