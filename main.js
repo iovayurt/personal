@@ -26,6 +26,14 @@ const torus = new THREE.Mesh( geometry, material );
 
 scene.add(torus)
 
+const tireTexture = new THREE.TextureLoader().load('tire.jpeg');
+
+const tonos = new THREE.TorusGeometry(10, 3, 16, 100)
+const teker = new THREE.MeshStandardMaterial({ map: tireTexture });
+const tire = new THREE.Mesh(tonos, teker);
+
+scene.add(tire)
+
 const pointLight = new THREE.PointLight(0xffffff)
 pointLight.position.set(5,5,5)
 
@@ -83,14 +91,17 @@ moon.position.setX(-10);
 ilyas.position.z = -5;
 ilyas.position.x = 2;
 
+tire.position.z = -20;
+tire.position.setX(-20);
+
 const marsTexture = new THREE.TextureLoader().load('soccer.jpeg');
-const mrsTexture = new THREE.TextureLoader().load('normal.jpeg');
+//const mrsTexture = new THREE.TextureLoader().load('normal.jpeg');
 
 const mars = new THREE.Mesh(
   new THREE.SphereGeometry(6, 52, 52),
   new THREE.MeshStandardMaterial( {
     map: marsTexture,
-    normalMap: mrsTexture,
+    //normalMap: mrsTexture,
   })
 );
 
@@ -128,6 +139,10 @@ function animate() {
   torus.rotation.x += 0.01;
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
+
+  tire.rotation.x += -0.01;
+  tire.rotation.y += -0.001;
+  tire.rotation.z += -0.01;
 
   controls.update();
 

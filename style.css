@@ -10,7 +10,7 @@ canvas {
   --dark-bg: rgba(206, 197, 197, 0.438);
   --spacing: 550px;
 
-  font-family: brandon-grotesque, sans-serif;
+  font-family: 'Chelsea Market', cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -30,7 +30,7 @@ main {
 }
 
 h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
+  font-family: 'Chelsea Market', cursive;
   font-weight: 700;
   font-style: normal;
 }
