@@ -18,7 +18,7 @@ camera.position.setZ(30);
 
 renderer.render( scene, camera );
 
-const torusTexture = new THREE.TextureLoader().load('donut.jpeg');
+const torusTexture = new THREE.TextureLoader().load('buoy.png');
 
 const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 )
 const material = new THREE.MeshStandardMaterial({ map: torusTexture } );
@@ -52,7 +52,7 @@ function addStar() {
 Array(200).fill().forEach(addStar)
 
 
-const spaceTexture = new THREE.TextureLoader().load('bg_space.png');
+const spaceTexture = new THREE.TextureLoader().load('sea1.jpeg');
 scene.background = spaceTexture;
 
 const ilyasTexture = new THREE.TextureLoader().load('tio1.jpeg');
