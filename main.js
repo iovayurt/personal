@@ -30,13 +30,13 @@ const torus = new THREE.Mesh( geometry, material );
 
 scene.add(torus)
 
-const tireTexture = new THREE.TextureLoader().load('tire.jpeg');
+//const tireTexture = new THREE.TextureLoader().load('tire.jpeg');
 
-const tonos = new THREE.TorusGeometry(10, 3, 16, 100)
-const teker = new THREE.MeshStandardMaterial({ map: tireTexture });
-const tire = new THREE.Mesh(tonos, teker);
+//const tonos = new THREE.TorusGeometry(10, 3, 16, 100)
+//const teker = new THREE.MeshStandardMaterial({ map: tireTexture });
+//const tire = new THREE.Mesh(tonos, teker);
 
-scene.add(tire)
+//scene.add(tire)
 
 const pointLight = new THREE.PointLight(0xffffff)
 pointLight.position.set(5,5,5)
@@ -76,27 +76,27 @@ const ilyas = new THREE.Mesh(
 
 scene.add(ilyas);
 
-const moonTexture = new THREE.TextureLoader().load('tennis.png');
+//const moonTexture = new THREE.TextureLoader().load('tennis.png');
 //const normalTexture = new THREE.TextureLoader().load('normal.jpeg');
 
-const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
-  new THREE.MeshStandardMaterial( {
-    map: moonTexture,
+//const moon = new THREE.Mesh(
+  //new THREE.SphereGeometry(3, 32, 32),
+  //new THREE.MeshStandardMaterial( {
+    //map: moonTexture,
     //normalMap: normalTexture,
-  } )
-);
+ // } )
+//);
 
-scene.add(moon);
+//scene.add(moon);
 
-moon.position.z = 20;
-moon.position.setX(-10);
+//moon.position.z = 20;
+//moon.position.setX(-10);
 
 ilyas.position.z = -5;
 ilyas.position.x = 2;
 
-tire.position.z = -20;
-tire.position.setX(-20);
+//tire.position.z = -20;
+//tire.position.setX(-20);
 
 const marsTexture = new THREE.TextureLoader().load('soccer.jpeg');
 //const mrsTexture = new THREE.TextureLoader().load('normal.jpeg');
@@ -117,9 +117,9 @@ mars.position.setX(30);
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
-  moon.rotation.x += 0.05;
-  moon.rotation.y += 0.075;
-  moon.rotation.z += 0.05;
+  //moon.rotation.x += 0.05;
+  //moon.rotation.y += 0.075;
+  //moon.rotation.z += 0.05;
 
   mars.rotation.x += 0.1;
   mars.rotation.y += 0.07;
@@ -144,9 +144,9 @@ function animate() {
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
 
-  tire.rotation.x += -0.01;
-  tire.rotation.y += -0.001;
-  tire.rotation.z += -0.01;
+  //tire.rotation.x += -0.01;
+  //tire.rotation.y += -0.001;
+  ///tire.rotation.z += -0.01;
 
   controls.update();
 
