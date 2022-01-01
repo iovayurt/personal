@@ -22,13 +22,13 @@ camera.position.setZ(30);
 
 renderer.render( scene, camera );
 
-//const torusTexture = new THREE.TextureLoader().load('buoy.png');
+const torusTexture = new THREE.TextureLoader().load('buoy.png');
 
-//const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 )
-//const material = new THREE.MeshStandardMaterial({ map: torusTexture } );
-//const torus = new THREE.Mesh( geometry, material );
+const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 )
+const material = new THREE.MeshStandardMaterial({ map: torusTexture } );
+const torus = new THREE.Mesh( geometry, material );
 
-//scene.add(torus)
+scene.add(torus)
 
 //const tireTexture = new THREE.TextureLoader().load('tire.jpeg');
 
@@ -140,9 +140,9 @@ moveCamera();
 function animate() {
   requestAnimationFrame( animate );
 
-  //torus.rotation.x += 0.01;
-  //torus.rotation.y += 0.005;
-  //torus.rotation.z += 0.01;
+  torus.rotation.x += 0.01;
+  torus.rotation.y += 0.005;
+  torus.rotation.z += 0.01;
 
   //tire.rotation.x += -0.01;
   //tire.rotation.y += -0.001;
