@@ -76,21 +76,21 @@ scene.background = spaceTexture;
 
 //scene.add(ilyas);
 
-//const moonTexture = new THREE.TextureLoader().load('tennis.png');
-//const normalTexture = new THREE.TextureLoader().load('normal.jpeg');
+const moonTexture = new THREE.TextureLoader().load('tennis.png');
+const normalTexture = new THREE.TextureLoader().load('normal.jpeg');
 
-//const moon = new THREE.Mesh(
-  //new THREE.SphereGeometry(3, 32, 32),
-  //new THREE.MeshStandardMaterial( {
-    //map: moonTexture,
-    //normalMap: normalTexture,
- // } )
-//);
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial( {
+    map: moonTexture,
+    normalMap: normalTexture,
+ } )
+);
 
-//scene.add(moon);
+scene.add(moon);
 
-//moon.position.z = 20;
-//moon.position.setX(-10);
+moon.position.z = 20;
+moon.position.setX(-10);
 
 //ilyas.position.z = -5;
 //ilyas.position.x = 2;
@@ -117,9 +117,9 @@ scene.background = spaceTexture;
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
-  //moon.rotation.x += 0.05;
-  //moon.rotation.y += 0.075;
-  //moon.rotation.z += 0.05;
+  moon.rotation.x += 0.05;
+  moon.rotation.y += 0.075;
+  moon.rotation.z += 0.05;
 
   //mars.rotation.x += 0.1;
   //mars.rotation.y += 0.07;
