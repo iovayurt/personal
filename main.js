@@ -67,14 +67,14 @@ Array(200).fill().forEach(addStar)
 const spaceTexture = new THREE.TextureLoader().load('sea1.jpeg');
 scene.background = spaceTexture;
 
-//const ilyasTexture = new THREE.TextureLoader().load('tio1.jpeg');
+const ilyasTexture = new THREE.TextureLoader().load('tio1.jpeg');
 
-//const ilyas = new THREE.Mesh(
-  //new THREE.BoxGeometry(3,3,3),
-  //new THREE.MeshBasicMaterial( { map: ilyasTexture })
-//);
+const ilyas = new THREE.Mesh(
+  new THREE.BoxGeometry(3,3,3),
+  new THREE.MeshBasicMaterial( { map: ilyasTexture })
+);
 
-//scene.add(ilyas);
+scene.add(ilyas);
 
 const moonTexture = new THREE.TextureLoader().load('tennis.png');
 const normalTexture = new THREE.TextureLoader().load('normal.jpeg');
@@ -92,8 +92,8 @@ scene.add(moon);
 moon.position.z = 20;
 moon.position.setX(-10);
 
-//ilyas.position.z = -5;
-//ilyas.position.x = 2;
+ilyas.position.z = -5;
+ilyas.position.x = 2;
 
 //tire.position.z = -20;
 //tire.position.setX(-20);
@@ -125,8 +125,8 @@ function moveCamera() {
   //mars.rotation.y += 0.07;
   //mars.rotation.z += 0.02;
 
-  //ilyas.rotation.y += 0.01;
-  //ilyas.rotation.z += 0.01;
+  ilyas.rotation.y += 0.01;
+  ilyas.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
